@@ -13,7 +13,7 @@ Array [
     className="counter"
   >
     <span
-      className="down clicker"
+      className="downclicker"
       onClick={[Function]}
     >
        
@@ -26,7 +26,7 @@ Array [
       0
     </span>
     <span
-      className="up clicker"
+      className="upclicker"
       onClick={[Function]}
     >
        

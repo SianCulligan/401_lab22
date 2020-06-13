@@ -17,23 +17,28 @@ describe ('Counter works correctly', () => {
 
 it('updates the state when a user clicks + ', () => {
     let component = shallow(<Counter />);
-    component.find('handleUp').simulate('click');
+    component.find('span.up.clicker').simulate('click', {});
     expect(component.state('count')).toBe(1);
+    expect(component.state('polarity')).toBe('positive');
 }) 
 
 it('updates the state when a user clicks - ', () => {
     let component = shallow(<Counter />);
-    component.find('handleDown').simulate('click');
+    component.find('span.down.clicker').simulate('click');
     expect(component.state('count')).toBe(-1);
+    expect(component.state('polarity')).toBe('negative');
 }) 
 
-it('The HTML matches any changes', () => {
-    let component = mount(<Counter />);
-    let html = component.find('count');
-    
-    component.find('handleUp').simulate('click');
-
+it('lets the user toggle between positve & negative', () => {
+    let component = shallow(<Counter />);
+    component.find('span.down.clicker').simulate('click', {});
+    expect(component.state('count')).toBe(-1);
+    expect(component.state('polarity')).toBe('negative');
+    component.find('span.up.clicker').simulate('click', {});
+    expect(component.state('count')).toBe(0);
+    expect(component.state('polarity')).toBe('');
+    component.find('span.up.clicker').simulate('click', {});
     expect(component.state('count')).toBe(1);
-    expect(html.text()).toBe('1');
-  });
+    expect(component.state('polarity')).toBe('positive');
+}) 
 });
