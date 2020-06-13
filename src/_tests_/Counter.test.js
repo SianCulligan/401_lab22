@@ -17,7 +17,7 @@ describe ('Counter works correctly', () => {
 
 it('updates the state when a user clicks + ', () => {
     let component = shallow(<Counter />);
-    component.find('span.up.clicker').simulate('click');
+    component.find('span.up.clicker').simulate('click', {});
     expect(component.state('count')).toBe(1);
     expect(component.state('polarity')).toBe('positive');
 }) 
@@ -41,14 +41,4 @@ it('lets the user toggle between positve & negative', () => {
     expect(component.state('count')).toBe(1);
     expect(component.state('polarity')).toBe('positive');
 }) 
-
-it('The HTML matches any changes', () => {
-    let component = mount(<Counter />);
-    let html = component.find('count');
-    
-    component.find('span.up.clicker').simulate('click');
-
-    expect(component.state('count')).toBe(1);
-    expect(html.text()).toBe('1');
-  });
 });
