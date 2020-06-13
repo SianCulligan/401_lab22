@@ -1,0 +1,35 @@
+$transparent : rgba(255, 255, 255, 0); 
+$fill: 100%;
+$text-outline: #000;
+$text-fill: whitesmoke;
+$font-size: 3em;
+
+
+body {
+    width: $fill;
+    height: $fill;
+    background: url("https://media1.giphy.com/media/cPmMyn3i0PHos/source.gif");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+}
+
+html {
+    background: url("https://pbs.twimg.com/media/EUd5AhiWoAAkG94.jpg");
+    background-attachment: fixed;
+    background-size: $fill;
+    width: auto;
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+
+
+
+
+
+

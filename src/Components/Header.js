@@ -3,7 +3,7 @@ import React from 'react';
 class Header extends React.Component {
     render() {
         return (
-            <header>
+            <header className="header">
                 <h1>Counters R Fun</h1>
             </header>
         );
@@ -11,3 +11,4 @@ class Header extends React.Component {
 }
 
 export default Header;
+
