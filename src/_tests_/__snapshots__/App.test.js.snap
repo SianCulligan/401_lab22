@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot test for the full app matches the snapshot 1`] = `
+Array [
+  <header
+    className="header"
+  >
+    <h1>
+      Counters R Fun
+    </h1>
+  </header>,
+  <section
+    className="counter"
+  >
+    <span
+      className="down clicker"
+      onClick={[Function]}
+    >
+       
+      -
+       
+    </span>
+    <span
+      className="count "
+    >
+      0
+    </span>
+    <span
+      className="up clicker"
+      onClick={[Function]}
+    >
+       
+      +
+       
+    </span>
+  </section>,
+  <footer
+    className="footer"
+  >
+    © 2018 Code Fellows
+  </footer>,
+]
+`;
